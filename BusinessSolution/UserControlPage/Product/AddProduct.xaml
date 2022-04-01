@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="BusinessSolution.AddProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:BusinessSolution"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="774">
+    <Grid x:Name="AddEmployeePage" Margin="10 70 9 30" Background="Transparent" Visibility="Visible">
+        <Border MinWidth="300" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="15" MaxWidth="700" Margin="0, 1, 0, 0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <TextBlock Text="Welcome" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+
+                <Grid Margin="0 0 0 20">
+                    <Button x:Name="CalculateMarketPriceButton" Content="Calculate Market Price" HorizontalAlignment="Left" Click="CalculateMarketPriceButton_Click"/>
+                    <Button x:Name="CalculateDealerCommissionButton" Content="Calculate Dealer Commission" HorizontalAlignment="Left" Click="CalculateDealerCommissionButton_Click" Visibility="Collapsed"/>
+                    <Button x:Name="RegisterProductButton" Content="Register" HorizontalAlignment="Left" Click="RegisterProductButton_Click" Visibility="Collapsed"/>
+                    <Button x:Name="RefreshButton" Content="Add New" HorizontalAlignment="Left" Margin="185 0 0 0" Click="RefreshButton_Click" Visibility="Collapsed"/>
+                    <Button x:Name="button" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" Width="75"  BorderBrush="{x:Null}" Foreground="#425f6d" Margin="10" RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Assets/0e2ea8b5-b142-482b-bea5-16a60c8249cd_200x200.png" Stretch="UniformToFill"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <TextBox x:Name="ProductBrand" materialDesign:HintAssist.Hint="Brand" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                <TextBox x:Name="ProductName" materialDesign:HintAssist.Hint="Product Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                <TextBox x:Name="ProductLaunchDate" materialDesign:HintAssist.Hint="Product Launch Date" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text="" Visibility="Collapsed"/>
+                <TextBox x:Name="ProductQuantity" materialDesign:HintAssist.Hint="Product Quantity" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                <TextBox x:Name="ProductBasePrice" materialDesign:HintAssist.Hint="Product Base Price" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                <TextBox x:Name="DealerCommission" materialDesign:HintAssist.Hint="Dealer Commission" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                <TextBox x:Name="ProductMarketPrice" materialDesign:HintAssist.Hint="Market Price" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                <Label x:Name="Message" Style="{StaticResource MaterialDesignLabel}" Content="" Margin="0 5" Visibility="Collapsed"/>
+                <Border>
+                    <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Right" Margin="0 0 10 0 " Click="CancelButton_Click"/>
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

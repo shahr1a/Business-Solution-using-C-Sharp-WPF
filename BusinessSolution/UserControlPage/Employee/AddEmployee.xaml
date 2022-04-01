@@ -1,0 +1,111 @@
+﻿<UserControl x:Class="BusinessSolution.AddEmployee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:BusinessSolution"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="774">
+    <Grid x:Name="AddEmployeePage" Margin="10 70 9 30" Background="Transparent" Visibility="Visible">
+        <Border MinWidth="300" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="15" MaxWidth="700" Margin="0, 1, 0, 0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <TextBlock Text="Welcome" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+
+                <Grid Margin="0 0 0 20">
+                    <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RegisterButton_Click"/>
+                    <Button x:Name="HomeButton" Content="Home" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" Click="HomeButton_Click"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="FirstName" materialDesign:HintAssist.Hint="First Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text="" Grid.Column="0"/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="FirstNameMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="LastName" materialDesign:HintAssist.Hint="Last Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="LastNameMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="PhoneNumber" materialDesign:HintAssist.Hint="Phone Number" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="PhoneNumberMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="Email" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="EmailMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="AddressLine" materialDesign:HintAssist.Hint="Address Line" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="AddressLineMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="City" materialDesign:HintAssist.Hint="City" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="CityMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="Country" materialDesign:HintAssist.Hint="Country" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5" Text=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="CountryMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <PasswordBox x:Name="Password" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0 5" Password=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="PasswordMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <PasswordBox x:Name="ConfirmPassword" materialDesign:HintAssist.Hint="Confirm Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0 5" Password=""/>
+                    <materialDesign:PackIcon Kind="Error" Foreground="Red" HorizontalAlignment="Right"  Visibility="Collapsed" x:Name="ConfirmPasswordMissing" Grid.Column="1" Margin="10 20 20 0"/>
+                </Grid>
+                <Label x:Name="ConfirmationMessage" Style="{StaticResource MaterialDesignLabel}" Content="" Margin="0 5" Visibility="Collapsed"/>
+                <Border>
+                    <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Right" Margin="0 0 10 0 " Click="CancelButton_Click"/>
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

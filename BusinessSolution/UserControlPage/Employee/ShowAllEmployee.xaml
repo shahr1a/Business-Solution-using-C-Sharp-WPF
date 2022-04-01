@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="BusinessSolution.ShowAllEmployee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:BusinessSolution"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="774">
+    <Grid x:Name="AddEmployeePage" Margin="10 70 9 30" Background="Transparent" Visibility="Visible">
+        <Border MinWidth="300" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="15" MaxWidth="700" Margin="0, 1, 0, 0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <Grid>
+                    <TextBlock Text="Employee List" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                    <Button x:Name="button" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" Width="70" BorderBrush="{x:Null}" Foreground="#425f6d" Margin="0,4,10,20" RenderTransformOrigin="0.5,0.5" Height="Auto">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Assets/0e2ea8b5-b142-482b-bea5-16a60c8249cd_200x200.png" Stretch="UniformToFill"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <StackPanel x:Name="StackPanelEmployee">
+                    <DataGrid x:Name="DataGridEmployee" AutoGenerateColumns="True" Height="Auto" Width="Auto" Visibility="Collapsed"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <Border HorizontalAlignment="Right" >
+                        <Button x:Name="ShowAllEmployeeButton" Content="Show All" Margin="0 10 10 0 " Click="ShowAllEmployeeButton_Click"/>
+                    </Border>
+                    <Border HorizontalAlignment="Right">
+                        <Button x:Name="UpdateButton" Content="Update" Margin="0 10 10 0 " Click="UpdateButton_Click"/>
+                    </Border>
+                    <Border HorizontalAlignment="Right">
+                        <Button x:Name="ExportExcelButton" Content="Export" Margin="0 10 10 0 " Click="ExportExcelButton_Click"/>
+                    </Border>
+                    <Border HorizontalAlignment="Right">
+                        <Button x:Name="CancelButton" Content="Cancel" Margin="0 10 10 0 " Click="CancelButton_Click"/>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

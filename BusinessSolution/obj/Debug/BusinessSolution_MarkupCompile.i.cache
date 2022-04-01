@@ -1,0 +1,20 @@
+﻿BusinessSolution
+
+
+winexe
+C#
+.cs
+I:\Program Files (x86)\CODE\Project2\BusinessSolution\BusinessSolution\obj\Debug\
+BusinessSolution
+none
+false
+DEBUG;TRACE
+I:\Program Files (x86)\CODE\Project2\BusinessSolution\BusinessSolution\App.xaml
+23-1864634118
+1-601106760
+43100671871
+27-157386063
+MainWindow.xaml;MainWindows\AdminWindow.xaml;MainWindows\EmployeeWindow.xaml;MainWindows\Login.xaml;Pages\WelcomePage.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Styles\Windows.xaml;UserControlPage\Employee\EmployeeManagerUserControl.xaml;UserControlPage\Employee\AddEmployee.xaml;UserControlPage\Employee\ShowAllEmployee.xaml;UserControlPage\Product\ProductManagerUserControl.xaml;UserControlPage\Employee\RemoveEmployee.xaml;UserControlPage\Employee\SearchEmployee.xaml;UserControlPage\Product\AddCategories.xaml;UserControlPage\Product\AddProduct.xaml;UserControlPage\Product\Categories.xaml;UserControlPage\Product\DeleteCategory.xaml;UserControlPage\Product\RemoveProduct.xaml;UserControlPage\Product\Inventory.xaml;UserControlPage\Product\Search.xaml;
+
+True
+

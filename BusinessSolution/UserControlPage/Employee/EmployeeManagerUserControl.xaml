@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="BusinessSolution.EmployeeManagerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BusinessSolution"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+    <Grid>
+        <materialDesign:PackIcon Kind="{Binding Path=Icon}" Width="30" Height="30" Margin="8 0 21 0" Foreground="#425f6d"/>
+        <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path = Header}" FontSize="30" Padding="0 0 0 20" Foreground="#425f6d"/>
+        <Expander x:Name="ExpanderMenu" Header="{Binding Path=Header}" IsExpanded="False" FontSize="30" Margin="20 0 0 0"  Width="220" HorizontalAlignment="Right" Background="{x:Null}" Foreground="#425f6d">
+            <ListView x:Name="ListViewMenu" ItemsSource="{Binding Path=SubItems}" Foreground="#425f6d" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Content="{Binding Path=Name}" Padding="20 5" Click="Button_Click"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Expander>
+    </Grid>
+</UserControl>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BusinessSolution">
+
+    <Style TargetType="{x:Type Button}" x:Key="WindowButtonColor">
+        <Setter Property="Foreground" Value="#425f6d"/>
+    </Style>
+
+</ResourceDictionary>
